@@ -1,0 +1,100 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww13520\viewh12080\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Model Capacity
+\f1\b0  - abstract idea; refers to the size of the set of possible functions (
+\f2\i aka hypothesis space
+\f1\i0 )\
+
+\f0\b Underftting/Overfitting
+\f1\b0  - important to ensure both 1) small training error and 2) small gap between the training and testing error\
+
+\f0\b VC dimension 
+\f1\b0 - not used in practice\
+
+\f0\b Regularization 
+\f1\b0 - modifications to a learning algorithm that intend to reduce the generalization error (
+\f2\i aka
+\f1\i0  test error) without increasing the training error\
+	- this can be MORE USEFUL than 
+\f2\i limiting the capacity of the hypothesis space
+\f1\i0  \
+	- the algorithm is modified to prefer certain solutions to others; this is sensitive to the size of the dataset (size of the regularization effect becomes smaller as the dataset grows)\
+	- 
+\f0\b we add a 
+\f3\i regularizer
+\f0\i0  to our performance function\
+	Norm-Based Regularization:
+\f1\b0  we want to minimize the 
+\f2\i training error
+\f1\i0  (eg. mean-squared error), but we add a 
+\f0\b penalty
+\f1\b0  such as L2 penalty, ridge pentalty, or weight decay\
+		- 
+\f2\i lambda
+\f3\b  
+\f1\i0\b0 controls the preference of the penalty or the original parameters\
+
+\f0\b Hyperparameters
+\f1\b0  - these parameters define the model but are not learned by the algorithm; 
+\f2\i hyperparameters often control model complexity 
+\f1\i0 \
+	- WE CANNOT USE THE TESTING SET TO FIND THE OPTIMAL HYPERPARAMETERS\
+	- instead, we leverage a 
+\f2\i validation set
+\f1\i0  to evaluate 
+\f2\i several models with different capacities (ie. different hyperparameters); 
+\f1\i0 this process is called 
+\f0\b model selection\
+	* 
+\f3\i cross-validation can be used for model selection
+\f1\i0\b0 ; \
+\
+
+\f0\b Maximum Likelihood Estimators:
+\f1\b0  the hypothesis space is enumerated by theta (our parameter); estimating the likelihood of observing the data with the parameter being tested\
+\
+In the 
+\f0\b Bayesian view
+\f1\b0 , estimators express a degree of belief after observing some data and are generally distributions or densities\'85\
+	- in 
+\f2\i bayesian prediction
+\f1\i0 , we are making predictions with the full posterior distribution (not a point estimate)\
+	- in practice, the 
+\f0\b maximum apriori probability 
+\f1\b0 estimate is used to update parameters\
+\
+
+\f0\b Suggestions from Nick
+\f1\b0 \
+\pard\tx220\tx720\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	1.	}With a small sample, use permutation analysis and bootstrapping \
+{\listtext	2.	}Put a bunch of classifiers in a dictionary and write a function or a class to iterate through them all\
+{\listtext	3.	}Use the net reclassification index for comparing two models\
+\pard\tx720\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+
+\f0\b Pentuum Inc. talk\
+
+\f1\b0 1. Image and Report Generation\
+	- traditional labeling approaches consider targets (diseases) as independent\
+	- proposal to choose a 
+\f2\i subset
+\f1\i0  of labels that is likely given the image\
+	- will use a 
+\f0\b conditional kernel
+\f1\b0  to simultaneously capture disease-disease correlation and disease-image relevance\
+\
+2. Similar-patient retrieval\
+	- 
+\f0\b distance-metric learning
+\f1\b0 : linear projection matrix to map patients into a feature space\
+	- \
+}
