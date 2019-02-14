@@ -1,4 +1,4 @@
-The magic of deep learning is that models can learn a _representation_ of the data. This increases model capacity so it can fit the training set and is achieved through stacking **hidden layers** on top of each other.
+Feedforward networks provide a universal system for representing functions because __for every function there exists a feedforward network that approximates this function__. This is achieved by learning _representations_ of the data. Deep learning relies on the assumption that _the function we want to learn involves composition of several simpler functions._ In other words, the learning problem consists of discovering a set of underlying factors of variation that can in turn be described in terms of other, _simpler_ underlying factors of variation. 
 
 ## How do deep learning models learn?
 
