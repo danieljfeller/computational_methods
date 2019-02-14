@@ -21,6 +21,10 @@ In the Bayesian view, estimators express a degree of belief after observing some
 	- in bayesian prediction, we are making predictions with the full posterior distribution (not a point estimate)
 	- in practice, the maximum apriori probability estimate is used to update parameters
 
+**Mutual Information** is the amount of information shared between two random variables; MI is 0 if two variables are independent.
+
+**KL Divergence** measures the divergence of one distribution (Q) from another distribution (P)
+
 **Suggestions from Nick**
 	1.	With a small sample, use permutation analysis and bootstrapping
 	2.	Put a bunch of classifiers in a dictionary and write a function or a class to iterate through them all
