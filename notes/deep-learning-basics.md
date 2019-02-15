@@ -1,4 +1,9 @@
-Feedforward networks provide a universal system for representing functions because __for every function there exists a feedforward network that approximates this function__. This is achieved by learning _representations_ of the data. Deep learning relies on the assumption that _the function we want to learn involves composition of several simpler functions._ In other words, the learning problem consists of discovering a set of underlying factors of variation that can in turn be described in terms of other, _simpler_ underlying factors of variation. 
+**Feedforward networks** provide a universal system for representing functions because __for every function there exists a feedforward network that approximates this function__. This is achieved by learning _representations_ of the data. Deep learning relies on the assumption that _the function we want to learn involves composition of several simpler functions._ There are 2 main motivations behind using deep learning models:
+
+1. We want to learn a representation of the data that is composed of simpler representations (eg. corners defined in terms of edges or n-grams in a document).
+2. Learning a sequence of sequentially dependent steps (eg. first locate a set of objects, then segment them from each other, then recognize them)
+
+ In other words, the learning problem consists of discovering a set of underlying factors of variation that can in turn be described in terms of other, _simpler_ underlying factors of variation. Empirically, **greater depth of networks does seem to result in better statistical generalization.**
 
 ## How do deep learning models learn?
 
@@ -15,6 +20,8 @@ The fundamental procedure for learning model parameters in deep learning is achi
 		- this is accomplished by tracking all computations performed on the learnable parameters
 
 ### What about model architecture?
+
+Fully connected layers are the building blocks of many networks but some models have layers where not every node in one layer is connected to all nodes in the subsequent layer. Many architectures feature **skip connections** that reduce the number of connections, thereby making it easier for the gradient to flow from output layers to layers closer to the input. Many specialized networks such as *RNNs* and *CNNs* have fewer connections so that each unit in the input layer is connected to only a small subset of units in the output layer, __although these are most useful for specialized problems__ (eg. computer vision or NLP).
 
 Each node in a neural network has an **activation function**. In modern neural networks, the default recommendation is to use _rectified linear units_. Because RELU is nearly linear, they preserve some properties that make linear models easy to optimize with gradient-based methods while making it easier for the linear model to minimize testing error. This is why __RELU units are the most common choice for hidden units__. As shown below, there are additional types of activation functions possible. In the past **logistic sigmoid** and **hyperbolic tangent** units were population, but they can make gradient-based learning very difficult and thus their use in feedforward networks is now discouraged (although some RNNs leverage sigmoid units).
 
