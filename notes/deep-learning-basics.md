@@ -1,7 +1,7 @@
-**Feedforward networks** provide a universal system for representing functions because __for every function there exists a feedforward network that approximates this function__. This is achieved by learning _representations_ of the data. Deep learning relies on the assumption that _the function we want to learn involves composition of several simpler functions._ There are 2 main motivations behind using deep learning models:
+**Feedforward networks** provide a universal system for representing functions because __for every function there exists a feedforward network that approximates this function__. Moreover, this follows from the assumption that _complex functions can be decomposed into several simpler functions._ There are 2 main motivations behind using deep learning models:
 
-1. We want to learn a representation of the data that is composed of simpler representations (eg. corners defined in terms of edges or n-grams in a document).
-2. Learning a sequence of sequentially dependent steps (eg. first locate a set of objects, then segment them from each other, then recognize them)
+1. We want to learn a _representation_ of the data that is composed of simpler representations (eg. corners defined in terms of edges or n-grams in a document).
+2. Learning a sequence of _sequentially dependent steps_ (eg. first locate a set of objects, then segment them from each other, then recognize them)
 
  In other words, the learning problem consists of discovering a set of underlying factors of variation that can in turn be described in terms of other, _simpler_ underlying factors of variation. Empirically, **greater depth of networks does seem to result in better statistical generalization.**
 
