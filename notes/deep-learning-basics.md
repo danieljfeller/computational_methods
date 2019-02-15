@@ -1,5 +1,5 @@
 
-![Header](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiDhPLb7b3gAhXtTN8KHb98DtcQjRx6BAgBEAU&url=https%3A%2F%2Flabs.eleks.com%2F2016%2F07%2Fdeep-learning-can-offer-businesses.html&psig=AOvVaw1Lh82AdEt5t5R5DgTNkg1J&ust=1550324159028699)
+![Header](https://i2.wp.com/aaronberk.ca/img/nn-keras-banner.jpg?zoom=2)
 
 **Feedforward networks** provide a universal system for representing functions because __for every function there exists a feedforward network that approximates this function__. Moreover, this follows from the assumption that _complex functions can be decomposed into several simpler functions._ There are 2 main motivations behind using deep learning models:
 
