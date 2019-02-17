@@ -1,6 +1,3 @@
-
-![Header](https://i2.wp.com/aaronberk.ca/img/nn-keras-banner.jpg?zoom=2)
-
 **Feedforward networks** provide a universal system for representing functions because __for every function there exists a feedforward network that approximates this function__. Moreover, this follows from the assumption that _complex functions can be decomposed into several simpler functions._ There are 2 main motivations behind using deep learning models:
 
 1. We want to learn a _representation_ of the data that is composed of simpler representations (eg. corners defined in terms of edges or n-grams in a document).
@@ -12,7 +9,6 @@
 
 The fundamental procedure for learning model parameters in deep learning is achieve through **gradient descent** and **backpropigation**. First, we build a computational graph for each vector that tracks the operations that were performed on that vector. Second, we then use the computational graph to compute the partial derivative of the loss function with respect to each model weight. These partial derivatives give us the **gradient of the loss function**. We then **update the model weights using gradient descent**. In short, the gradient descent algorithm attempts to find a local minimum of the loss function by iteratively updating the weights of the model using the gradient computed using backpropigation. Gradient descent uses a simple update rule that subtracts the gradient (multiplied by the learning rate) from the model parameters.
 
-
 #### Training Procedure
 1. Define a neural network that has parameters that we will learn (aka weights)
 2. Iterate over a dataset of inputs (aka 1 epoch)
@@ -23,6 +19,8 @@ The fundamental procedure for learning model parameters in deep learning is achi
 
 ![Backpropigation](https://cdn-images-1.medium.com/max/1600/1*q1M7LGiDTirwU-4LcFq7_Q.png)
 
+#### A Note on Loss Functions
+While **Mean Squared Error** was popular in the 1990s, it has been gradually replaced by **Cross-Entropy Loss** and the principle of maximum likelihood estimation. The use of cross-entropy losse greatly improved the performance of models with sigmoid and softmax outputs, which _previously_ suffered from saturation and slow learning (when using MSE).  
 
 ### What about model architecture?
 

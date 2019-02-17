@@ -25,6 +25,10 @@ In the Bayesian view, estimators express a degree of belief after observing some
 
 **KL Divergence** measures the divergence of one distribution (Q) from another distribution (P)
 
+**Density Estimation** is the task of estimating a probability density based on samples from an independent trials process
+
+**K-Nearest Neighbors** creates a sphere circled around a single point and then iteratively grows to include K points.
+
 **Suggestions from Nick**
 	1.	With a small sample, use permutation analysis and bootstrapping
 	2.	Put a bunch of classifiers in a dictionary and write a function or a class to iterate through them all
