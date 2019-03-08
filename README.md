@@ -3,6 +3,7 @@ This directory contains materials that would help individuals with some programm
 
 ### Cheatsheets for Deep Learning & Machine Learning
 ML: https://stanford.edu/~shervine/teaching/cs-229/
+
 DL: https://stanford.edu/~shervine/teaching/cs-230/
 
 #### Activate & Deactivate Anaconda Environment
