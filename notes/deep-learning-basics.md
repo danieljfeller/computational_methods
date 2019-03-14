@@ -16,6 +16,7 @@ The fundamental procedure for learning model parameters in deep learning is achi
 4. Compute the loss (using the preselected objective function)
 5. Propagate gradients back into the network’s parameters (aka **backpropigation**)
 		- this is accomplished by tracking all computations performed on the learnable parameters
+6. Continue procedure until testing error no longer decreases; this is known as **early stopping**. 
 
 ![Backpropigation](https://cdn-images-1.medium.com/max/1600/1*q1M7LGiDTirwU-4LcFq7_Q.png)
 
